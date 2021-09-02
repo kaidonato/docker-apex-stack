@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export APEX_HOME=$ORACLE_BASE/product/apex
+export APEX_PATCH_HOME=/tmp/files/apex_patch
 export ORDS_HOME=$ORACLE_BASE/product/ords
 export SCRIPT_DIR=$SCRIPTS_ROOT
 export FILES_DIR=/tmp/files

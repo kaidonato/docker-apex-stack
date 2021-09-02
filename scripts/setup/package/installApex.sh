@@ -43,6 +43,7 @@ sqlplus / as sysdba << EOF
   end;
   /
 
+
   -- Setup APEX Admin account
   prompt Setup APEX Admin account
   begin
@@ -58,3 +59,13 @@ sqlplus / as sysdba << EOF
   end;
   /
 EOF
+
+cd $APEX_PATCH_HOME
+
+echo "Installing APEX PATCHSET"
+sqlplus / as sysdba << EOF
+  alter session set container = ${ORACLE_PDB:-XEPDB1};
+  @catpatch.sql 
+  
+EOF
+
