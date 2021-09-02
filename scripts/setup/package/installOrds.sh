@@ -19,6 +19,11 @@ cat << EOF > $PARAM_FILE
 db.hostname=localhost
 db.password=${APEX_PUBLIC_USER_PWD:-$ORACLE_PWD}
 db.port=1521
+security.forceHTTPS=true
+jdbc.InitialLimit=6
+jdbc.MaxConnectionReuseCount=1000
+jdbc.MaxLimit=50
+misc.compress
 db.servicename=${ORACLE_PDB:-XEPDB1}
 db.username=APEX_PUBLIC_USER
 plsql.gateway.add=true

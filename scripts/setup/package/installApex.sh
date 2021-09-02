@@ -69,3 +69,6 @@ sqlplus / as sysdba << EOF
   
 EOF
 
+echo "Copying APEX-Images"
+cp -r $APEX_PATCH_HOME/images /opt/oracle/product/apex/images
+
